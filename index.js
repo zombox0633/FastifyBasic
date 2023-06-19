@@ -4,6 +4,9 @@
 const fastify = require("fastify")({ logger: true });
 const dotenv = require("dotenv").config();
 
+//npm install prisma -D เพื่อตัวโปรเจค fastify สามารถเชื่อมต่อข้อมูลกับฝั่ง MySQL Docker Compose
+//เมื่อติดตั้งเสร็จก็ทำการ สร้างไฟล์ prisma/schema.prisma และทำการกำหนดค่าฐานข้อมูล MySQL Docker Compose
+
 //TEST
 // const GET_items = require("./routes/api-test/getItems");
 // const POST_items = require("./routes/api-test/getItems");
@@ -63,7 +66,9 @@ const options = {
 //   },
 // });
 
-fastify.register(require("./routes/items"));
+// fastify.register(require("./routes/items"));
+
+fastify.register(require("./routes/itemsDB"));
 
 // Run the basic server!
 const start = async () => {
