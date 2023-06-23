@@ -56,7 +56,7 @@ const addItem = async (request, reply) => {
   }
 };
 
-const deleteItem = (request, reply) => {
+const deleteItem = async (request, reply) => {
   try {
     const id = parseInt(request.params.id);
     const found = items.find((item) => item.id === id);
@@ -74,7 +74,7 @@ const deleteItem = (request, reply) => {
   }
 };
 
-const updateItem = (request, reply) => {
+const updateItem = async (request, reply) => {
   try {
     const id = parseInt(request.params.id);
     const found = items.find((item) => item.id === id);

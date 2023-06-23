@@ -42,3 +42,9 @@ enum Role {
   USER
   ADMIN
 }
+
+npx prisma migrate dev --name init
+
+ตอนแรกในการใช้คำสั่งต้องใช้ url ค่าเป็น root ตอนในการสร้างตอนแรก และเปลี่ยนเป็น USER และ PASSWORD ตอนใช้ npx prisma migrate dev --name init แล้วภายหลัง
+
+คำสั่ง npx prisma migrate dev --name init ใช้สำหรับการทำการ migrate ใน Prisma โดยมีชื่อเรียกว่า "init" ซึ่งจะสร้างการ migrate เพื่อเตรียมฐานข้อมูลสำหรับโมเดลแรกของคุณหรือการเริ่มต้นโครงสร้างฐานข้อมูลของคุณใหม่ (New Database) โดยใช้ไฟล์ prisma/schema.prisma เป็นแหล่งข้อมูลสำหรับการสร้างตารางฐานข้อมูลและการเขียนโมเดลของคุณ
